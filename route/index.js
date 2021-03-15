@@ -29,6 +29,10 @@ var upload = multer({
 /*--------------
  ROUTES
 --------------- */
+//display docs
+router.get("/", (req, res) => {
+  res.render("docs.html");
+});
 
 //register a user
 router.post("/signup", user.IqSignup);
