@@ -7,7 +7,7 @@ const iqUsersSchema = new Schema({
   password: { type: String },
   confirm_password: { type: String },
   avatar: { type: String },
-  reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],
+  review: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 });
 
 module.exports = Mongoose.model("IqUser", iqUsersSchema);

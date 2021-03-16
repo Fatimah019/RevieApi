@@ -1,4 +1,4 @@
 module.exports = {
-  Review: require("./reviews"),
+  IqUserReview: require("./iquserreview"),
   IqUser: require("./iquser"),
 };
