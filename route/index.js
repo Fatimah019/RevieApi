@@ -32,7 +32,7 @@ var upload = multer({
 --------------- */
 //display docs
 router.get("/", (req, res) => {
-  res.render("/docs.html");
+  res.render("docs.html");
 });
 
 //register a user
