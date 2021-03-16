@@ -395,7 +395,6 @@ exports.DeleteReviewById = async (req, res) => {
 // // get all reviews and sort by recent
 exports.GetAllReviews = async (req, res) => {
   IqUserReview.find()
-    .populate({ path: "review", options: { sort: { date: 1 } } })
     .then((reviews) => {
       return res.json({
         status: true,
@@ -410,6 +409,23 @@ exports.GetAllReviews = async (req, res) => {
     });
 };
 
+// sort post by recennt
+exports.GetAllRecentReviews = async (req, res) => {
+  IqUserReview.find({})
+    .sort({ date: -1 })
+    .then((reviews) => {
+      return res.json({
+        status: true,
+        data: reviews,
+      });
+    })
+    .catch((err) => {
+      return res.json({
+        status: false,
+        message: err,
+      });
+    });
+};
 // mark review as helpful
 exports.MarkReviewAsHelpfulById = (req, res) => {
   let count = 0;

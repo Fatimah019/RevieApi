@@ -78,6 +78,9 @@ router.delete("/delete/review/:id", verifyJwt, user.DeleteReviewById);
 // // get all reviews
 router.get("/reviews", user.GetAllReviews);
 
+// sort reviews by recent
+router.get("/reviews/sort", user.GetAllRecentReviews);
+
 // // mark a review as helpful by its id
 router.put("/mark/review/:id", user.MarkReviewAsHelpfulById);
 
