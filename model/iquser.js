@@ -6,6 +6,7 @@ const iqUsersSchema = new Schema({
   username: { type: String },
   password: { type: String },
   confirm_password: { type: String },
+  avatar: { type: String },
   reviews: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 });
 

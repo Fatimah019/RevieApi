@@ -3,22 +3,21 @@ const { User } = require("../model");
 require("dotenv").config();
 
 const path = require("path");
-const Datauri = require("datauri");
 const multer = require("multer");
 // const dataUri = require("datauri");
 
 // image upload
 //declare the file storage procedure
-const storage = multer.memoryStorage();
-const dUri = new Datauri();
+// const storage = multer.memoryStorage();
+// const dUri = new Datauri();
 
-const imgStorage = multer({
-  storage,
-}).array("productavatar", 10);
+// const imgStorage = multer({
+//   storage,
+// }).array("productavatar", 10);
 
-const dataUri = (req) => {
-  dUri.format(path.extname(req.file.originalname).toString(), req.file.buffer);
-};
+// const dataUri = (req) => {
+//   dUri.format(path.extname(req.file.originalname).toString(), req.file.buffer);
+// };
 
 // exports.verifyJwt = (req, res, next) => {
 //   const authHeader = req.headers.authorization;

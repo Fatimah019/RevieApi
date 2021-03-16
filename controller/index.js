@@ -5,7 +5,7 @@ const { cloudinary } = require("../config");
 
 // IqTest
 //signup (post method)
-exports.IqSignup = async (req, res) => {
+exports.Signup = async (req, res) => {
   req.check("email", "make sure you fill in your email").notEmpty();
   req
     .check("email", "make sure your email is correct and in the right format")
@@ -82,7 +82,7 @@ exports.IqSignup = async (req, res) => {
             .catch((err) => {
               res.json({
                 status: false,
-                message: err,
+                message: `Could not sign you up ${err}`,
               });
             });
         }
@@ -97,7 +97,7 @@ exports.IqSignup = async (req, res) => {
 };
 
 //login (post method)
-exports.IqLogin = async (req, res) => {
+exports.Login = async (req, res) => {
   req.check("email", "make sure you fill in your email").notEmpty();
 
   req
@@ -151,7 +151,6 @@ exports.IqLogin = async (req, res) => {
       return res.json({
         success: true,
         token,
-        data: payload,
       });
     }
   } catch (err) {
