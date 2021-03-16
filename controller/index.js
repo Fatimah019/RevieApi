@@ -270,6 +270,7 @@ exports.PostReview = async (req, res) => {
       areaType: req.body.areaType,
       distancetoroad: req.body.distancetoroad,
       reviewimageorvideo: reqFiles.map((reqfile) => reqfile.result),
+      helpfulmarks: req.body.helpfulmarks,
     })
       .then((reviewdb) => {
         IqUser.findByIdAndUpdate(
@@ -409,23 +410,46 @@ exports.GetAllReviews = async (req, res) => {
     });
 };
 
-// // matk review as helpful (post method)
-// exports.HelpulReviewMark = (req, res) => {
-//   Review.findOne({ _id: req.params.id })
-//     .then((count) => {
-//       return res.json({
-//         status: true,
-//         count: count + 1,
-//       });
-//     })
-//     .catch((err) => {
-//       return res.json({
-//         status: false,
-//         message: err,
-//       });
-//     });
-// };
+// mark review as helpful
+exports.MarkReviewAsHelpfulById = (req, res) => {
+  let count = 0;
+  IqUserReview.findByIdAndUpdate(
+    { _id: req.params.id },
+    {
+      helpfulmarks: count + 1,
+    },
+    { new: true }
+  )
+    .then((updatedreview) => {
+      return res.json({
+        status: true,
+        count: updatedreview,
+      });
+    })
+    .catch((err) => {
+      return res.json({
+        status: false,
+        message: err,
+      });
+    });
+};
 
+// get reviews mark count
+exports.GetReviewMarkCount = (req, res) => {
+  IqUserReview.findOne({ _id: req.params.id })
+    .then((markcount) => {
+      return res.json({
+        status: true,
+        data: markcount.helpfulmarks,
+      });
+    })
+    .catch((err) => {
+      return res.json({
+        status: false,
+        message: err,
+      });
+    });
+};
 // // get all users
 // exports.GetUsers = (req, res) => {
 //   IqUser.find()

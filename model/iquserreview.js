@@ -8,12 +8,12 @@ const iqUsersReviewSchema = new Schema({
   landlordname: { type: String },
   landlordstateoforigin: { type: String },
   landlordoccupation: { type: String },
-  NoOfOccupants: { type: String },
+  NoOfOccupants: { type: Number },
   electricityavailability: { type: Boolean },
   wateravailability: { type: Boolean },
   areaType: { type: String },
   distancetoroad: { type: String },
-  helpfulmarks: { type: String },
+  helpfulmarks: { type: Number },
   date: { type: Date, required: true, default: Date.now },
 });
 

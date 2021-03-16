@@ -31,6 +31,9 @@ var upload = multer({
  ROUTES
 --------------- */
 //display docs
+router.get("/", (req, res) => {
+  res.render("/docs.html");
+});
 
 //register a user
 router.post("/signup", user.Signup);
@@ -76,9 +79,9 @@ router.delete("/delete/review/:id", verifyJwt, user.DeleteReviewById);
 router.get("/reviews", user.GetAllReviews);
 
 // // mark a review as helpful by its id
-// router.put("/mark/review/:id", user.MarkReview);
+router.put("/mark/review/:id", user.MarkReviewAsHelpfulById);
 
 // // get review marks count
-// router.get("/review/count/:id", user.GetReviewMarkCount);
+router.get("/review/count/:id", user.GetReviewMarkCount);
 
 module.exports = router;
