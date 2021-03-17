@@ -15,4 +15,4 @@ https://documenter.getpostman.com/view/11223454/Tz5s4wUj
 ![Schema for the use case](https://res.cloudinary.com/dycyotaya/image/upload/v1615965310/Screenshot_20210317-073646_1_enovnz.jpg)
 
 ## Use Case showing the endpoints and corresponding methods.
-![Use Case showing endpoints and methods](https://res.cloudinary.com/dycyotaya/image/upload/v1615965272/Screenshot_20210317-073646_1_cctuwa.jpg)
+![Use Case showing endpoints and methods](https://res.cloudinary.com/dycyotaya/image/upload/v1615966623/Screenshot_20210317-073619_1_vrdbci.jpg)
