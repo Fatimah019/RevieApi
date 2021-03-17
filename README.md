@@ -8,10 +8,11 @@ Deploy the API to any server of choice. Share links to the API, documentation, a
 
 ## Solution
 ## API Documentation.
-![Link to API Documentation] (https://documenter.getpostman.com/view/11223454/Tz5s4wUj)
+Link to API Documentation:
+https://documenter.getpostman.com/view/11223454/Tz5s4wUj
 
 ## Schema Image for the use case
-![Schema for the use case] (https://res.cloudinary.com/dycyotaya/image/upload/v1615965310/Screenshot_20210317-073646_1_enovnz.jpg)
+![Schema for the use case](https://res.cloudinary.com/dycyotaya/image/upload/v1615965310/Screenshot_20210317-073646_1_enovnz.jpg)
 
 ## Use Case showing the endpoints and corresponding methods.
-![Use Case showing endpoints and methods] (https://res.cloudinary.com/dycyotaya/image/upload/v1615965272/Screenshot_20210317-073646_1_cctuwa.jpg)
+![Use Case showing endpoints and methods](https://res.cloudinary.com/dycyotaya/image/upload/v1615965272/Screenshot_20210317-073646_1_cctuwa.jpg)
